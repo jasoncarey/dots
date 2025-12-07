@@ -1,0 +1,22 @@
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
+
+# use the "tiled" layout that we want to try
+# (Default: float, which is "normal" window behavior.)
+yabai -m config layout bsp
+
+# ctrl is the most useful mouse modifier for me…
+# I don't have fn on my mech keyboards usually.
+# (Default: fn)
+yabai -m config mouse_modifier ctrl
+
+# when you drop a window on another window, stack the two.
+# (Default: swap)
+yabai -m config mouse_drop_action stack
+
+# padding
+yabai -m config top_padding 55
+yabai -m config bottom_padding 20
+yabai -m config left_padding 20
+yabai -m config right_padding 20
+yabai -m config window_gap 20
