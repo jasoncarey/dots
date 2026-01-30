@@ -1,0 +1,44 @@
+# theme = catppuccin-mocha
+theme = palenight
+font-family = "SF Mono"
+font-feature = "liga"
+font-size = 14
+
+# background-opacity = 0.90
+#background-blur = true
+unfocused-split-opacity = 1
+window-theme = auto
+
+window-save-state = always
+# macos-titlebar-style=transparent
+window-colorspace = "display-p3"
+
+keybind = super+left=previous_tab
+keybind = super+right=next_tab
+keybind = cmd+s>n=new_window
+
+keybind = cmd+s>v=new_split:right
+keybind = cmd+s>b=new_split:down
+
+keybind = cmd+s>j=goto_split:bottom
+keybind = cmd+s>k=goto_split:top
+keybind = cmd+s>h=goto_split:left
+keybind = cmd+s>l=goto_split:right
+
+keybind = cmd+s>e=equalize_splits
+keybind = cmd+s>w=close_surface
+
+cursor-click-to-move = true
+
+# macos-option-as-alt = true
+keybind = global:cmd+option+p=toggle_quick_terminal
+quick-terminal-position = right 
+quick-terminal-animation-duration = 0.08
+quick-terminal-autohide = false
+
+background-opacity = 0.88
+background-blur = 18
+macos-titlebar-style = hidden
+window-padding-x = 12
+window-padding-y = 10
+keybind = shift+enter=text:\x1b\r
