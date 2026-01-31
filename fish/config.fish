@@ -13,3 +13,4 @@ function __nvm_auto_use --on-variable PWD
 end
 
 starship init fish | source
+zoxide init fish | source
