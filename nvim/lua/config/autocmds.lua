@@ -25,3 +25,9 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     })
   end,
 })
+
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    vim.g.worktree_label = vim.fn.fnamemodify(vim.fn.getcwd(), ":t")
+  end,
+})
