@@ -25,6 +25,13 @@ return {
         sidebars = "transparent",
         floats = "transparent",
       },
+
+      on_highlights = function(hl, c)
+        hl.DiffDelete = { bg = "#2a2e36", fg = "#565f89" }
+        hl.DiffChange = { bg = "#2a2e36" }
+        hl.DiffText = { bg = "#3a3f4b" }
+        hl.DiffAdd = { bg = "#233027" }
+      end,
     },
   },
   { "tiagovla/tokyodark.nvim", priority = 1000 },
