@@ -27,9 +27,10 @@ return {
       },
 
       on_highlights = function(hl, c)
-        hl.DiffDelete = { bg = "#2a2e36", fg = "#565f89" }
-        hl.DiffChange = { bg = "#2a2e36" }
-        hl.DiffText = { bg = "#3a3f4b" }
+        hl.DiffChange = { bg = "#1f2335" }
+        hl.DiffText = { bg = "#24283b" }
+        hl.DiffDelete = { bg = "#1f2335", fg = "#f7768e" }
+        hl.DiffDeleteSign = { fg = "#f7768e", bg = "NONE" }
       end,
     },
   },
