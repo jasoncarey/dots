@@ -5,7 +5,7 @@ theme = tokyo-night-default
 
 font-family = "Geist Mono"
 #font-feature = "liga"
-font-size = 15
+font-size = 16
 
 #background-blur = true
 unfocused-split-opacity = 1

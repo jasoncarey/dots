@@ -8,7 +8,7 @@ return {
 
     keys = {
       { "<leader>gv", "<cmd>DiffviewOpen<cr>", desc = "Diffview: open" },
-      { "<leader>gq", "<cmd>DiffviewClose<cr>", desc = "Diffview: close" },
+      { "<leader>gV", "<cmd>DiffviewClose<cr>", desc = "Diffview: close" },
       { "<leader>gh", "<cmd>DiffviewFileHistory %<cr>", desc = "Diffview: file history" },
       { "<leader>gH", "<cmd>DiffviewFileHistory<cr>", desc = "Diffview: repo history" },
     },

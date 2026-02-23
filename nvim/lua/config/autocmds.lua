@@ -69,3 +69,26 @@ vim.api.nvim_create_autocmd("VimEnter", {
     vim.g.worktree_label = vim.fn.fnamemodify(vim.fn.getcwd(), ":t")
   end,
 })
+
+vim.api.nvim_create_autocmd("BufEnter", {
+  callback = function()
+    local root = vim.fn.getcwd()
+
+    -- change this to match your project folder name or marker file
+    if vim.fn.filereadable(root .. "/biome.json") == 1 or vim.fn.filereadable(root .. "/package.json") == 1 then
+      vim.api.nvim_buf_create_user_command(0, "Fix", function()
+        vim.cmd("write")
+        vim.fn.jobstart("yarn lint:fix", {
+          stdout_buffered = true,
+          stderr_buffered = true,
+          on_exit = function()
+            vim.schedule(function()
+              vim.cmd("edit!") -- reload file
+              print("lint:fix complete")
+            end)
+          end,
+        })
+      end, {})
+    end
+  end,
+})

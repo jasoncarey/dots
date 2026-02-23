@@ -30,7 +30,6 @@ return {
         hl.DiffDelete = { bg = "#2a2e36", fg = "#565f89" }
         hl.DiffChange = { bg = "#2a2e36" }
         hl.DiffText = { bg = "#3a3f4b" }
-        hl.DiffAdd = { bg = "#233027" }
       end,
     },
   },
