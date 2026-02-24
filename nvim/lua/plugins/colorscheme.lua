@@ -27,8 +27,8 @@ return {
       },
 
       on_highlights = function(hl, c)
-        hl.DiffChange = { bg = "#1f2335" }
-        hl.DiffText = { bg = "#24283b" }
+        hl.DiffChange = { bg = "#2e3f66" }
+        hl.DiffText = { bg = "#344a78" }
         hl.DiffDelete = { bg = "#1f2335", fg = "#f7768e" }
         hl.DiffDeleteSign = { fg = "#f7768e", bg = "NONE" }
       end,
