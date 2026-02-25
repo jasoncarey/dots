@@ -3,7 +3,9 @@
 theme = tokyo-night-default
 #theme = solarized-osaka
 
-font-family = "Geist Mono"
+#font-family = "Geist Mono"
+# font-family = "Maple Mono Normal NL NF CN"
+font-family = "CommitMono350"
 #font-feature = "liga"
 font-size = 16
 
@@ -39,8 +41,8 @@ quick-terminal-position = right
 quick-terminal-animation-duration = 0.08
 quick-terminal-autohide = false
 
-background-opacity = 0.9
-background-blur = 20
+#background-opacity = 0.9
+#background-blur = 20
 #background = #031219
 
 macos-titlebar-style = hidden
