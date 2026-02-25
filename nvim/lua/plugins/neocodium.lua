@@ -1,49 +1,50 @@
-return {
-  {
-    "monkoose/neocodeium",
-    event = "InsertEnter",
-    opts = {
-      -- keep defaults; tweak if you want
-      enabled = true,
-      debounce = false,
-      show_label = true,
-      silent = false,
-      -- disable in prompts / special buffers etc (default true in plugin)
-      disable_in_special_buftypes = true,
-      filetypes = {
-        help = false,
-        gitcommit = false,
-        gitrebase = false,
-        ["."] = false,
-      },
-    },
-    config = function(_, opts)
-      local neocodeium = require("neocodeium")
-      neocodeium.setup(opts)
-
-      -- Keymaps (pick whatever you like)
-      vim.keymap.set("i", "<A-f>", neocodeium.accept, { desc = "NeoCodeium: accept" })
-      vim.keymap.set("i", "<A-w>", neocodeium.accept_word, { desc = "NeoCodeium: accept word" })
-      vim.keymap.set("i", "<A-l>", neocodeium.accept_line, { desc = "NeoCodeium: accept line" })
-      vim.keymap.set("i", "<A-]>", function()
-        neocodeium.cycle(1)
-      end, { desc = "NeoCodeium: next" })
-      vim.keymap.set("i", "<A-[>", function()
-        neocodeium.cycle(-1)
-      end, { desc = "NeoCodeium: prev" })
-      vim.keymap.set("i", "<A-c>", neocodeium.clear, { desc = "NeoCodeium: clear" })
-
-      -- LazyVim integration point: define an "ai_accept" action
-      -- (matches how LazyVim’s Codeium extra wires accept into cmp actions)  [oai_citation:1‡lazyvim.github.io](https://lazyvim.github.io/extras/ai/codeium?utm_source=chatgpt.com)
-      if LazyVim and LazyVim.cmp and LazyVim.cmp.actions then
-        LazyVim.cmp.actions.ai_accept = function()
-          if neocodeium.visible() then
-            LazyVim.create_undo()
-            neocodeium.accept()
-            return true
-          end
-        end
-      end
-    end,
-  },
-}
+return {}
+-- return {
+--   {
+--     "monkoose/neocodeium",
+--     event = "InsertEnter",
+--     opts = {
+--       -- keep defaults; tweak if you want
+--       enabled = true,
+--       debounce = false,
+--       show_label = true,
+--       silent = false,
+--       -- disable in prompts / special buffers etc (default true in plugin)
+--       disable_in_special_buftypes = true,
+--       filetypes = {
+--         help = false,
+--         gitcommit = false,
+--         gitrebase = false,
+--         ["."] = false,
+--       },
+--     },
+--     config = function(_, opts)
+--       local neocodeium = require("neocodeium")
+--       neocodeium.setup(opts)
+--
+--       -- Keymaps (pick whatever you like)
+--       vim.keymap.set("i", "<A-f>", neocodeium.accept, { desc = "NeoCodeium: accept" })
+--       vim.keymap.set("i", "<A-w>", neocodeium.accept_word, { desc = "NeoCodeium: accept word" })
+--       vim.keymap.set("i", "<A-l>", neocodeium.accept_line, { desc = "NeoCodeium: accept line" })
+--       vim.keymap.set("i", "<A-]>", function()
+--         neocodeium.cycle(1)
+--       end, { desc = "NeoCodeium: next" })
+--       vim.keymap.set("i", "<A-[>", function()
+--         neocodeium.cycle(-1)
+--       end, { desc = "NeoCodeium: prev" })
+--       vim.keymap.set("i", "<A-c>", neocodeium.clear, { desc = "NeoCodeium: clear" })
+--
+--       -- LazyVim integration point: define an "ai_accept" action
+--       -- (matches how LazyVim’s Codeium extra wires accept into cmp actions)  [oai_citation:1‡lazyvim.github.io](https://lazyvim.github.io/extras/ai/codeium?utm_source=chatgpt.com)
+--       if LazyVim and LazyVim.cmp and LazyVim.cmp.actions then
+--         LazyVim.cmp.actions.ai_accept = function()
+--           if neocodeium.visible() then
+--             LazyVim.create_undo()
+--             neocodeium.accept()
+--             return true
+--           end
+--         end
+--       end
+--     end,
+--   },
+-- }

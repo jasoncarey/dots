@@ -21,3 +21,7 @@ vim.keymap.set("n", "<leader>uh", function()
 end, { desc = "Toggle inlay hints" })
 
 vim.keymap.set("n", "<leader>lf", "<cmd>Fix<cr>", { desc = "lint fix" })
+
+vim.keymap.set("n", "<leader>uw", function()
+  vim.opt.wrap = not vim.opt.wrap:get()
+end, { desc = "Toggle wrap" })
