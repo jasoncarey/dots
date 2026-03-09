@@ -4,45 +4,6 @@
       "complex_modifications": {
         "rules": [
           {
-            "description": "Hyper Key: Right Option → left shift + left option + left command (⌃⇧⌥⌘)",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "right_option",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "set_variable": {
-                      "name": "hyper_right_option",
-                      "value": 1
-                    }
-                  },
-                  {
-                    "key_code": "left_control",
-                    "modifiers": [
-                      "left_shift",
-                      "left_option"
-                    ]
-                  }
-                ],
-                "to_after_key_up": [
-                  {
-                    "set_variable": {
-                      "name": "hyper_right_option",
-                      "value": 0
-                    }
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
             "description": "Caps Lock -> Escape",
             "manipulators": [
               {
@@ -52,46 +13,6 @@
                 "to": [
                   {
                     "key_code": "escape"
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "Hyper Key: Caps Lock → left control + left shift + left option (⌃⇧⌥)",
-            "enabled": false,
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "right_option",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "set_variable": {
-                      "name": "hyper_caps_lock",
-                      "value": 1
-                    }
-                  },
-                  {
-                    "key_code": "left_control",
-                    "modifiers": [
-                      "left_shift",
-                      "left_option"
-                    ]
-                  }
-                ],
-                "to_after_key_up": [
-                  {
-                    "set_variable": {
-                      "name": "hyper_caps_lock",
-                      "value": 0
-                    }
                   }
                 ],
                 "type": "basic"

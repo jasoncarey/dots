@@ -1,0 +1,389 @@
+{
+  "type": "group",
+  "actions": [
+    {
+      "key": "1",
+      "type": "command",
+      "value": "aerospace workspace 1"
+    },
+    {
+      "key": "2",
+      "type": "command",
+      "value": "aerospace workspace 2"
+    },
+    {
+      "key": "3",
+      "type": "command",
+      "value": "aerospace workspace 3"
+    },
+    {
+      "key": "4",
+      "type": "command",
+      "value": "aerospace workspace 4"
+    },
+    {
+      "key": "5",
+      "type": "command",
+      "value": "aerospace workspace 5"
+    },
+    {
+      "key": "6",
+      "type": "command",
+      "value": "aerospace workspace 6"
+    },
+    {
+      "key": "7",
+      "type": "command",
+      "value": "aerospace workspace 7"
+    },
+    {
+      "key": "8",
+      "type": "command",
+      "value": "aerospace workspace 8"
+    },
+    {
+      "key": "9",
+      "type": "command",
+      "value": "aerospace workspace 9"
+    },
+    {
+      "key": "a",
+      "type": "command",
+      "value": "aerospace workspace A"
+    },
+    {
+      "key": "b",
+      "type": "command",
+      "value": "aerospace workspace B"
+    },
+    {
+      "key": "c",
+      "type": "command",
+      "value": "aerospace workspace C"
+    },
+    {
+      "key": "d",
+      "type": "command",
+      "value": "aerospace workspace D"
+    },
+    {
+      "key": "e",
+      "type": "command",
+      "value": "aerospace workspace E"
+    },
+    {
+      "key": "f",
+      "type": "command",
+      "value": "aerospace workspace F"
+    },
+    {
+      "key": "g",
+      "type": "command",
+      "value": "aerospace workspace G"
+    },
+    {
+      "key": "i",
+      "type": "command",
+      "value": "aerospace workspace I"
+    },
+    {
+      "key": "n",
+      "type": "command",
+      "value": "aerospace workspace N"
+    },
+    {
+      "key": "o",
+      "type": "command",
+      "value": "aerospace workspace O"
+    },
+    {
+      "key": "p",
+      "type": "command",
+      "value": "aerospace workspace P"
+    },
+    {
+      "key": "q",
+      "type": "command",
+      "value": "aerospace workspace Q"
+    },
+    {
+      "key": "r",
+      "type": "command",
+      "value": "aerospace workspace R"
+    },
+    {
+      "key": "s",
+      "type": "command",
+      "value": "aerospace workspace S"
+    },
+    {
+      "key": "t",
+      "type": "command",
+      "value": "aerospace workspace T"
+    },
+    {
+      "key": "u",
+      "type": "command",
+      "value": "aerospace workspace U"
+    },
+    {
+      "key": "v",
+      "type": "command",
+      "value": "aerospace workspace V"
+    },
+    {
+      "key": "w",
+      "type": "command",
+      "value": "aerospace workspace W"
+    },
+    {
+      "key": "x",
+      "type": "command",
+      "value": "aerospace workspace X"
+    },
+    {
+      "key": "y",
+      "type": "command",
+      "value": "aerospace workspace Y"
+    },
+    {
+      "key": "z",
+      "type": "command",
+      "value": "aerospace workspace Z"
+    },
+    {
+      "key": "m",
+      "type": "group",
+      "label": "Move window",
+      "actions": [
+        {
+          "key": "1",
+          "type": "command",
+          "value": "aerospace move-node-to-workspace 1"
+        },
+        {
+          "key": "2",
+          "type": "command",
+          "value": "aerospace move-node-to-workspace 2"
+        },
+        {
+          "key": "3",
+          "type": "command",
+          "value": "aerospace move-node-to-workspace 3"
+        },
+        {
+          "key": "4",
+          "type": "command",
+          "value": "aerospace move-node-to-workspace 4"
+        },
+        {
+          "key": "5",
+          "type": "command",
+          "value": "aerospace move-node-to-workspace 5"
+        },
+        {
+          "key": "6",
+          "type": "command",
+          "value": "aerospace move-node-to-workspace 6"
+        },
+        {
+          "key": "7",
+          "type": "command",
+          "value": "aerospace move-node-to-workspace 7"
+        },
+        {
+          "key": "8",
+          "type": "command",
+          "value": "aerospace move-node-to-workspace 8"
+        },
+        {
+          "key": "9",
+          "type": "command",
+          "value": "aerospace move-node-to-workspace 9"
+        },
+        {
+          "key": "a",
+          "type": "command",
+          "value": "aerospace move-node-to-workspace A"
+        },
+        {
+          "key": "b",
+          "type": "command",
+          "value": "aerospace move-node-to-workspace B"
+        },
+        {
+          "key": "c",
+          "type": "command",
+          "value": "aerospace move-node-to-workspace C"
+        },
+        {
+          "key": "d",
+          "type": "command",
+          "value": "aerospace move-node-to-workspace D"
+        },
+        {
+          "key": "e",
+          "type": "command",
+          "value": "aerospace move-node-to-workspace E"
+        },
+        {
+          "key": "f",
+          "type": "command",
+          "value": "aerospace move-node-to-workspace F"
+        },
+        {
+          "key": "g",
+          "type": "command",
+          "value": "aerospace move-node-to-workspace G"
+        },
+        {
+          "key": "i",
+          "type": "command",
+          "value": "aerospace move-node-to-workspace I"
+        },
+        {
+          "key": "n",
+          "type": "command",
+          "value": "aerospace move-node-to-workspace N"
+        },
+        {
+          "key": "o",
+          "type": "command",
+          "value": "aerospace move-node-to-workspace O"
+        },
+        {
+          "key": "p",
+          "type": "command",
+          "value": "aerospace move-node-to-workspace P"
+        },
+        {
+          "key": "q",
+          "type": "command",
+          "value": "aerospace move-node-to-workspace Q"
+        },
+        {
+          "key": "r",
+          "type": "command",
+          "value": "aerospace move-node-to-workspace R"
+        },
+        {
+          "key": "s",
+          "type": "command",
+          "value": "aerospace move-node-to-workspace S"
+        },
+        {
+          "key": "t",
+          "type": "command",
+          "value": "aerospace move-node-to-workspace T"
+        },
+        {
+          "key": "u",
+          "type": "command",
+          "value": "aerospace move-node-to-workspace U"
+        },
+        {
+          "key": "v",
+          "type": "command",
+          "value": "aerospace move-node-to-workspace V"
+        },
+        {
+          "key": "w",
+          "type": "command",
+          "value": "aerospace move-node-to-workspace W"
+        },
+        {
+          "key": "x",
+          "type": "command",
+          "value": "aerospace move-node-to-workspace X"
+        },
+        {
+          "key": "y",
+          "type": "command",
+          "value": "aerospace move-node-to-workspace Y"
+        },
+        {
+          "key": "z",
+          "type": "command",
+          "value": "aerospace move-node-to-workspace Z"
+        }
+      ]
+    },
+    {
+      "key": "h",
+      "type": "command",
+      "value": "aerospace focus left"
+    },
+    {
+      "key": "j",
+      "type": "command",
+      "value": "aerospace focus down"
+    },
+    {
+      "key": "k",
+      "type": "command",
+      "value": "aerospace focus up"
+    },
+    {
+      "key": "l",
+      "type": "command",
+      "value": "aerospace focus right"
+    },
+    {
+      "key": "H",
+      "type": "command",
+      "value": "aerospace move left"
+    },
+    {
+      "key": "J",
+      "type": "command",
+      "value": "aerospace move down"
+    },
+    {
+      "key": "K",
+      "type": "command",
+      "value": "aerospace move up"
+    },
+    {
+      "key": "L",
+      "type": "command",
+      "value": "aerospace move right"
+    },
+    {
+      "key": ".",
+      "type": "group",
+      "label": "Layout",
+      "actions": [
+        {
+          "key": "h",
+          "type": "command",
+          "value": "aerospace layout horizontal"
+        },
+        {
+          "key": "v",
+          "type": "command",
+          "value": "aerospace layout vertical"
+        },
+        {
+          "key": "t",
+          "type": "command",
+          "value": "aerospace layout tiles horizontal vertical"
+        },
+        {
+          "key": "a",
+          "type": "command",
+          "value": "aerospace layout accordion horizontal vertical"
+        },
+        {
+          "key": "f",
+          "type": "command",
+          "value": "aerospace layout floating tiling"
+        },
+        {
+          "key": "r",
+          "type": "command",
+          "value": "aerospace flatten-workspace-tree"
+        }
+      ]
+    }
+  ]
+}
