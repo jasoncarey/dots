@@ -46,7 +46,7 @@ quick-terminal-position = right
 quick-terminal-animation-duration = 0.08
 quick-terminal-autohide = false
 
-background-opacity = 0.95
+# background-opacity = 0.95
 background-blur = 20
 #background = #031219
 
