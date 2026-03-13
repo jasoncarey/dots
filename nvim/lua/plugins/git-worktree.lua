@@ -21,10 +21,6 @@ return {
         vim.cmd(cfg.update_on_change_command)
       end)
 
-      local function has(mod)
-        return package.loaded[mod] or pcall(require, mod)
-      end
-
       -- Minimal worktree list via git (works regardless of Telescope/Snacks)
       local function list_worktrees()
         local out = vim.system({ "git", "worktree", "list", "--porcelain" }, { text = true }):wait()
@@ -137,16 +133,11 @@ return {
             if not branch or branch == "" then
               return
             end
-            vim.ui.input({ prompt = "Upstream branch (e.g. main): ", default = "main" }, function(upstream)
+            vim.ui.input({ prompt = "Upstream (e.g. origin/main): ", default = "origin/main" }, function(upstream)
               if not upstream or upstream == "" then
                 return
               end
-              vim.ui.input({ prompt = "Remote (e.g. origin): ", default = "origin" }, function(remote)
-                if not remote or remote == "" then
-                  return
-                end
-                git_worktree.create_worktree(path, upstream, remote, branch)
-              end)
+              git_worktree.create_worktree(path, branch, upstream)
             end)
           end)
         end)
@@ -162,7 +153,16 @@ return {
       vim.keymap.set("n", "<leader>gwd", function()
         local git_worktree = require("git-worktree")
         pick_worktree("Delete worktree", function(it)
-          git_worktree.delete_worktree(it.path)
+          local label = it.branch or it.path
+          vim.ui.select({ "Yes", "Yes (force)", "No" }, {
+            prompt = "Delete worktree " .. label .. "?",
+          }, function(choice)
+            if choice == "Yes" then
+              git_worktree.delete_worktree(it.path, false)
+            elseif choice == "Yes (force)" then
+              git_worktree.delete_worktree(it.path, true)
+            end
+          end)
         end)
       end, { desc = "Git Worktree: delete" })
     end,
