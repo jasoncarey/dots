@@ -6,3 +6,5 @@ vim.opt.termguicolors = true
 vim.opt.wrap = true
 vim.opt.linebreak = true -- wrap at word boundaries (recommended)
 vim.opt.breakindent = true -- keep indentation on wrapped lines
+
+vim.opt.fillchars:append({ diff = " " })
