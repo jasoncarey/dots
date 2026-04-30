@@ -124,12 +124,14 @@ return {
       end
 
       vim.keymap.set("n", "<leader>gwc", function()
+        -- Switch to a clean buffer so input and hooks don't hit a nomodifiable buffer
+        vim.cmd("enew")
         local git_worktree = require("git-worktree")
-        vim.ui.input({ prompt = "Worktree path (relative to repo or absolute): " }, function(path)
+        vim.ui.input({ prompt = "Worktree path: " }, function(path)
           if not path or path == "" then
             return
           end
-          vim.ui.input({ prompt = "New branch name: " }, function(branch)
+          vim.ui.input({ prompt = "Branch name: " }, function(branch)
             if not branch or branch == "" then
               return
             end
