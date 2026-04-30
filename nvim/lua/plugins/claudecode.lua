@@ -1,39 +1,34 @@
--- return {
---   {
---     "coder/claudecode.nvim",
---     dependencies = { "folke/snacks.nvim" },
---     keys = {
---       { "<leader>ac", "<cmd>ClaudeCodeFocus<cr>", desc = "Claude Code", mode = { "n", "x" } },
---       -- make <leader>ac work inside the floating terminal too
---       {
---         "<leader>ac",
---         [[<C-\><C-n><cmd>ClaudeCodeFocus<cr>]],
---         desc = "Claude Code",
---         mode = "t",
---       },
---     },
---     opts = {
---       terminal = {
---         snacks_win_opts = {
---           position = "float",
---           width = 0.6,
---           height = 0.6,
---           border = "double",
---           backdrop = 80,
---         },
---       },
---     },
---   },
--- }
+local toggle_key = "<F5>"
+-- local toggle_key = "<F13>" -- swap to this once VIA is set up
 
--- config for left side chat
 return {
   "coder/claudecode.nvim",
   dependencies = { "folke/snacks.nvim" },
+  keys = {
+    { toggle_key, "<cmd>ClaudeCodeFocus<cr>", desc = "Toggle Claude Code", mode = { "n", "x" } },
+  },
   opts = {
     terminal = {
-      split_side = "left",
-      split_width_percentage = 0.30,
+      snacks_win_opts = {
+        position = "float",
+        width = 0.6,
+        height = 0.7,
+        border = "rounded",
+        keys = {
+          claude_hide = {
+            toggle_key,
+            function(self)
+              self:hide()
+            end,
+            mode = "t",
+            desc = "Hide Claude Code",
+          },
+        },
+      },
+    },
+    diff_opts = {
+      open_in_new_tab = true,
+      hide_terminal_in_new_tab = true,
     },
   },
   config = true,
