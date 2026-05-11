@@ -1,6 +1,6 @@
-How# theme = catppuccin-mocha
 #theme = palenight
 theme = tokyo-night-default
+#theme = TokyoNight Moon
 #theme = solarized-osaka
 
 font-family = "Geist Mono Light"
