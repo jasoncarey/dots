@@ -8,7 +8,7 @@ font-family = "Geist Mono Light"
 # font-family = "Maple Mono Normal NL NF CN"
 # font-family = "CommitMono350"
 #font-feature = "liga"
-font-size = 16
+font-size = 15 
 
 font-feature = -liga
 font-feature = -dlig
