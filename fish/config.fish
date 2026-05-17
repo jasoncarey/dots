@@ -21,6 +21,8 @@ function __nvm_auto_use --on-variable PWD
             nvm install $node_version >/dev/null
             nvm use $node_version >/dev/null
         end
+    else if test -n "$nvm_default_version"
+        nvm use $nvm_default_version >/dev/null 2>&1
     end
 end
 
