@@ -1,11 +1,28 @@
 return {
   {
-    "github/copilot.vim",
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
     event = "InsertEnter",
-    config = function()
-      vim.g.copilot_no_tab_map = true
-      -- optional: keymaps
-      vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { expr = true, silent = true })
-    end,
+    opts = {
+      panel = { enabled = false },
+      suggestion = {
+        enabled = true,
+        auto_trigger = true,
+        keymap = {
+          accept = "<Tab>",
+          accept_word = false,
+          accept_line = false,
+          next = "<M-]>",
+          prev = "<M-[>",
+          dismiss = "<C-]>",
+        },
+      },
+      filetypes = {
+        markdown = true,
+        gitcommit = true,
+        ["*"] = true,
+      },
+    },
   },
 }
+
