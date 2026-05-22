@@ -14,6 +14,9 @@ return {
       diff = {
         layout = "side-by-side",
       },
+      explorer = {
+        width = 50,
+      },
     },
 
     config = function(_, opts)
@@ -54,3 +57,4 @@ return {
     end,
   },
 }
+
