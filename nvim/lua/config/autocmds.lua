@@ -70,6 +70,14 @@ vim.api.nvim_create_autocmd("VimEnter", {
   end,
 })
 
+-- TODO: remove once nvim 0.12 document_color race is fixed upstream
+-- (assert at runtime/lua/vim/lsp/document_color.lua:225 on stale client id)
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = function(ev)
+    pcall(vim.lsp.document_color.enable, false, ev.buf)
+  end,
+})
+
 vim.api.nvim_create_autocmd("BufEnter", {
   callback = function()
     local root = vim.fn.getcwd()
