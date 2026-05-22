@@ -1,6 +1,7 @@
 set -g fish_greeting
 if status is-interactive
     # Commands to run in interactive sessions can go here
+    abbr -a lg lazygit
 end
 
 # pipx (used by uv as well)
