@@ -18,10 +18,21 @@ return {
           claude_hide = {
             toggle_key,
             function(self)
-              self:hide()
+              vim.cmd("stopinsert")
+              vim.schedule(function()
+                vim.cmd("ClaudeCodeFocus")
+              end)
             end,
             mode = "t",
             desc = "Hide Claude Code",
+          },
+          claude_redraw = {
+            "<C-l>",
+            function()
+              vim.cmd("mode") -- force full screen redraw, clears ghosted cells
+            end,
+            mode = "t",
+            desc = "Redraw Claude Code",
           },
         },
       },

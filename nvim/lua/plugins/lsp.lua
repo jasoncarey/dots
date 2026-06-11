@@ -16,7 +16,7 @@ return {
         vtsls = {
           settings = {
             typescript = {
-              tsserver = { maxTsServerMemory = 2048 },
+              tsserver = { maxTsServerMemory = 8192 },
             },
           },
         },
