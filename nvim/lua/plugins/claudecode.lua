@@ -26,14 +26,6 @@ return {
             mode = "t",
             desc = "Hide Claude Code",
           },
-          claude_redraw = {
-            "<C-l>",
-            function()
-              vim.cmd("mode") -- force full screen redraw, clears ghosted cells
-            end,
-            mode = "t",
-            desc = "Redraw Claude Code",
-          },
         },
       },
     },
