@@ -164,7 +164,7 @@ alt-shift-l = 'move right'
 alt-minus = 'resize smart -50'
 alt-equal = 'resize smart +50'
 
-# Workspace switching and move-node-to-workspace are handled by LeaderKey/Tuna
+# Workspace switching and move-node-to-workspace are handled by Tuna (leader = F12)
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 alt-tab = 'workspace-back-and-forth'
@@ -174,7 +174,7 @@ alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 alt-shift-semicolon = 'mode service'
 
-# Layout commands are handled by LeaderKey/Tuna (leader + l)
+# Layout commands are handled by Tuna (leader + .)
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
