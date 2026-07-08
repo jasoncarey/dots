@@ -3,11 +3,13 @@ lazy-lock.json
 fish/completions/*
 !fish/completions/work.fish
 !fish/completions/wt.fish
+!fish/completions/theme.fish
 fish/conf.d/
 fish/functions/*
 !fish/functions/work.fish
 !fish/functions/wt.fish
 !fish/functions/__fleet_session.fish
 !fish/functions/__fleet_name.fish
+!fish/functions/theme.fish
 fish/themes/
 fish/fish_variables

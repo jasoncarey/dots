@@ -1,142 +1,204 @@
+# --- Solarized Osaka palette (TEMPORARY theme override) ---
+# Overrides the standard color NAMES the default format uses (red/green/blue/
+# cyan/purple/yellow) so the whole prompt takes solarized-osaka hues without
+# rewriting format strings. Revert: delete the `palette=` line + block below.
+palette = "solarized_osaka"
+
+[palettes.solarized_osaka]
+red = "#db302d"
+green = "#849900"
+yellow = "#b28500"
+blue = "#268bd3"
+purple = "#6d71c4"
+cyan = "#29a298"
+
 [aws]
-format = "$symbol($profile )(bold yellow)"
-
-[aws.region_aliases]
-ap-southeast-2 = "ap-se-2"
-us-east-1 = "na-1"
-
-[env_var.awsume]
-variable = "AWSUME_EXPIRATION"
-format = "until [$env_value](bold yellow) "
-
-[bun]
-format = "via [$symbol]($style)"
+symbol = "  "
 
 [buf]
-format = "via [$symbol]($style)"
+symbol = " "
+
+[bun]
+symbol = " "
+
+[c]
+symbol = " "
+
+[cpp]
+symbol = " "
 
 [cmake]
-format = "via [$symbol]($style)"
+symbol = " "
 
-[cobol]
-format = "via [$symbol]($style)"
+[conda]
+symbol = " "
 
 [crystal]
-format = "via [$symbol]($style)"
-
-[daml]
-format = "via [$symbol]($style)"
+symbol = " "
 
 [dart]
-format = "via [$symbol]($style)"
+symbol = " "
 
 [deno]
-format = "via [$symbol]($style)"
+symbol = " "
 
-[dotnet]
-format = "[$symbol(🎯 $tfm )]($style)"
+[directory]
+read_only = " 󰌾"
+
+[docker_context]
+symbol = " "
 
 [elixir]
-format = 'via [$symbol]($style)'
+symbol = " "
 
 [elm]
-format = 'via [$symbol]($style)'
-
-[erlang]
-format = 'via [$symbol]($style)'
+symbol = " "
 
 [fennel]
-format = 'via [$symbol]($style)'
+symbol = " "
 
-[gleam]
-format = 'via [$symbol]($style)'
+[fossil_branch]
+symbol = " "
+
+[gcloud]
+symbol = "  "
+
+[git_branch]
+symbol = " "
+
+[git_commit]
+tag_symbol = '  '
 
 [golang]
-format = 'via [$symbol]($style)'
+symbol = " "
 
-[gradle]
-format = 'via [$symbol]($style)'
+[guix_shell]
+symbol = " "
+
+[haskell]
+symbol = " "
 
 [haxe]
-format = 'via [$symbol]($style)'
+symbol = " "
 
-[helm]
-format = 'via [$symbol]($style)'
+[hg_branch]
+symbol = " "
+
+[hostname]
+ssh_symbol = " "
 
 [java]
-format = 'via [$symbol]($style)'
+symbol = " "
 
 [julia]
-format = 'via [$symbol]($style)'
+symbol = " "
 
 [kotlin]
-format = 'via [$symbol]($style)'
+symbol = " "
 
 [lua]
-format = 'via [$symbol]($style)'
+symbol = " "
+
+[memory_usage]
+symbol = "󰍛 "
 
 [meson]
-format = 'via [$symbol]($style)'
+symbol = "󰔷 "
 
 [nim]
-format = 'via [$symbol]($style)'
+symbol = "󰆥 "
+
+[nix_shell]
+symbol = " "
 
 [nodejs]
-format = 'via [$symbol]($style)'
+symbol = " "
 
 [ocaml]
-format = 'via [$symbol(\($switch_indicator$switch_name\) )]($style)'
+symbol = " "
 
-[opa]
-format = 'via [$symbol]($style)'
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+AlmaLinux = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CachyOS = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+Nobara = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+RockyLinux = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Void = " "
+Windows = "󰍲 "
+
+[package]
+symbol = "󰏗 "
 
 [perl]
-format = 'via [$symbol]($style)'
+symbol = " "
 
 [php]
-format = 'via [$symbol]($style)'
+symbol = " "
 
-[pulumi]
-format = 'via [$symbol$stack]($style)'
+[pijul_channel]
+symbol = " "
 
-[purescript]
-format = 'via [$symbol]($style)'
+[pixi]
+symbol = "󰏗 "
 
 [python]
-format = 'via [$symbol]($style)'
-
-[quarto]
-format = 'via [$symbol]($style)'
-
-[raku]
-format = 'via [$symbol]($style)'
-
-[red]
-format = 'via [$symbol]($style)'
+symbol = " "
 
 [rlang]
-format = 'via [$symbol]($style)'
+symbol = "󰟔 "
 
 [ruby]
-format = 'via [$symbol]($style)'
+symbol = " "
 
 [rust]
-format = 'via [$symbol]($style)'
+symbol = "󱘗 "
 
-[solidity]
-format = 'via [$symbol]($style)'
-
-[typst]
-format = 'via [$symbol]($style)'
+[scala]
+symbol = " "
 
 [swift]
-format = 'via [$symbol]($style)'
-
-[vagrant]
-format = 'via [$symbol]($style)'
-
-[vlang]
-format = 'via [$symbol]($style)'
+symbol = " "
 
 [zig]
-format = 'via [$symbol]($style)'
+symbol = " "
+
+[gradle]
+symbol = " "

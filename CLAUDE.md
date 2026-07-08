@@ -75,3 +75,32 @@ that session (`client-session-changed` hook in `tmux/tmux.conf`).
 
 `fzf` and `git` worktree support; tmux ≥ 3.x. fish autoloads `wt` from the
 symlinked `~/.config/fish` → `dots/fish`.
+
+## Theme toggle
+
+`theme` (fish fn) switches the whole terminal look in one shot:
+
+| Command | Look |
+|---|---|
+| `theme solarized` | Solarized Osaka (official craftzdog palette; whites softened) |
+| `theme default` | TokyoNight (fish) + Cyberpunk (tmux) |
+
+It flips **fish** syntax colors (`fish_config theme save` → universal vars, live in
+all shells), **tmux** (rewrites the sourced theme path + live-reloads), and
+**starship** (comments/uncomments the `solarized_osaka` palette). **ghostty** it
+rewrites the `theme =` line but can't reload from the CLI — hit `cmd+shift+,`.
+
+Why a command and not a git branch: the active fish theme lives in the gitignored
+`fish/fish_variables`, so a branch checkout can't toggle it.
+
+### Files
+
+- `fish/functions/theme.fish` — the `theme` command (+ `fish/completions/theme.fish`).
+- `tmux/themes/solarized-osaka.conf`, `tmux/themes/cyberpunk.conf` — the two
+  status-bar blocks; `tmux/tmux.conf` `source-file`s whichever is selected.
+- `ghostty/themes/solarized-osaka` — official palette; `solarized-osaka-tuned` is
+  the prior hand-tuned backup.
+- `starship/starship.toml` — holds the `[palettes.solarized_osaka]` block, which
+  overrides the standard color names the default prompt uses. Symlinked to
+  `~/.config/starship.toml`; the fn edits the real dots file (`sed -i` would sever
+  the symlink).
