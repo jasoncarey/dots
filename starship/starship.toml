@@ -2,7 +2,7 @@
 # Overrides the standard color NAMES the default format uses (red/green/blue/
 # cyan/purple/yellow) so the whole prompt takes solarized-osaka hues without
 # rewriting format strings. Revert: delete the `palette=` line + block below.
-palette = "solarized_osaka"
+# palette = "solarized_osaka"
 
 [palettes.solarized_osaka]
 red = "#db302d"

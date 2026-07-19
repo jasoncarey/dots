@@ -1,11 +1,11 @@
 #theme = palenight
 # theme = tokyo-night-default
-theme = solarized-osaka
+theme = tokyo-night-default
 #theme = TokyoNight Moon
 #theme = solarized-osaka
 
 font-family = "Geist Mono Light"
-# font-family = "Input"
+#font-family = "Input"
 # font-family = "Maple Mono Normal NL NF CN"
 # font-family = "CommitMono350"
 #font-feature = "liga"
