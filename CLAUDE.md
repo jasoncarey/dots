@@ -104,3 +104,35 @@ Why a command and not a git branch: the active fish theme lives in the gitignore
   overrides the standard color names the default prompt uses. Symlinked to
   `~/.config/starship.toml`; the fn edits the real dots file (`sed -i` would sever
   the symlink).
+
+## fzf
+
+Three places use fzf, all independent:
+
+| Trigger | What |
+|---|---|
+| `prefix + f` (tmux) | `tmux/wt-switch.sh` — fleet session switcher in a popup. |
+| `wt` with no arg | picks one of the current repo's worktrees. |
+| fish key bindings | `fzf.fish` plugin (below). |
+
+### fzf.fish bindings
+
+Installed with `fisher install patrickf1/fzf.fish` (tracked in `fish/fish_plugins`;
+the plugin's own files land in the gitignored `fish/functions`, `conf.d`,
+`completions`). Defaults, live in both default and vi-insert mode:
+
+| Key | Search |
+|---|---|
+| `ctrl-r` | command history |
+| `ctrl-alt-f` | directory (files/dirs under cwd, via `fd`) |
+| `ctrl-alt-l` | git log |
+| `ctrl-alt-s` | git status (modified files) |
+| `ctrl-alt-p` | processes |
+| `ctrl-v` | shell variables |
+
+Rebind with `fzf_configure_bindings --history=... --directory=...` in
+`fish/config.fish` (pass `--<feature>` with no value to disable one).
+
+Deps: `fd` (directory search) and `bat` (file preview — the preview command calls
+it with no fallback, so it's required, not optional). `macos-option-as-alt = true`
+in `ghostty/config` is what makes the `ctrl-alt-*` keys reach fish.
