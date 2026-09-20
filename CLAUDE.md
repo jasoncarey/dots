@@ -49,6 +49,30 @@ nvim / claude / shell windows.
   pre-existing worktrees elsewhere (e.g. `shufflecom-api/wt/<label>`) are opened
   via `wt` (picker) or `work <label>`, not re-created.
 
+### Session persistence (surviving a reboot)
+
+tmux-resurrect + tmux-continuum (via tpm) keep the fleet across restarts.
+Continuum autosaves every 15 min and **auto-restores when the tmux server
+starts** — so after a reboot the first `work`/`wt`/`tmux` brings every session
+back: names, windows (nvim/claude/shell), layouts and per-window cwd.
+
+- **nvim** relaunches automatically (it's in resurrect's default restore list);
+  use LazyVim's `<leader>qs` to reload that directory's buffers.
+- **claude** deliberately does *not* relaunch — a restored window would start a
+  fresh conversation. The claude window comes back as a fish shell in the right
+  worktree; run `claude --continue` there to resume.
+- Manual save/restore: `prefix + C-s` / `prefix + C-r`. Saves live in
+  `~/.tmux/resurrect/` (timestamped files + a `last` symlink).
+- Pane scrollback capture is off on purpose: resurrect writes capture files
+  named `pane-<session>:<win>.<pane>`, and fleet session names contain a slash
+  (`repo/worktree`), so those writes fail. Turning it on would only add
+  scrollback for non-worktree sessions and error on the rest.
+
+Plugins are declared in `tmux/tmux.conf`; tpm itself is untracked and lives in
+`~/.tmux/plugins/` — bootstrap with
+`git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`, then
+`prefix + I`.
+
 ### Attention indicator
 
 When a Claude session finishes or asks a question, a Stop/Notification hook
@@ -74,7 +98,8 @@ that session (`client-session-changed` hook in `tmux/tmux.conf`).
 ### Requirements
 
 `fzf` and `git` worktree support; tmux ≥ 3.x. fish autoloads `wt` from the
-symlinked `~/.config/fish` → `dots/fish`.
+symlinked `~/.config/fish` → `dots/fish`. Session persistence needs tpm cloned
+to `~/.tmux/plugins/tpm` (see above).
 
 ## Theme toggle
 
