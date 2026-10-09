@@ -11,5 +11,6 @@ fish/functions/*
 !fish/functions/__fleet_session.fish
 !fish/functions/__fleet_name.fish
 !fish/functions/theme.fish
+!fish/functions/nb.fish
 fish/themes/
 fish/fish_variables

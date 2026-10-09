@@ -29,6 +29,7 @@ and jumps to them).
 | `wt <branch>` | Create a NEW worktree (if missing) + its tmux session, then jump to it. |
 | `wt rm <branch>` | Kill the session and remove the worktree. |
 | `wt ls` | List this repo's open worktree sessions. |
+| `nb <branch>` | In the current worktree: fetch origin's default branch and `switch -c <branch> --no-track origin/<default>`. Reuse a worktree for a new task without checking out `main` (which another worktree may hold). |
 | `prefix + f` | fzf popup to switch sessions (the fleet). `enter` switches; `ctrl-x` kills the highlighted session (session only — not the worktree). |
 | `prefix + r` | Reload tmux config. |
 
