@@ -1,0 +1,1124 @@
+[catalogs]
+searchPriorities = []
+sortOrders = []
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'camera-preview.commands'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.applications'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.audio-input-devices'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.audio-output-devices'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.clipboard'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.color-history'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.color-tools'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.combo-actions'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.combo-groups'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.commands'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.contacts'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.current-selection'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.custom-items'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.dictation-history'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.effects'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.emoji'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.finder-favorites'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.last-dictation-recording'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.media-controls'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.menu-items'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.modes'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.network-locations'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.printers'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.processes'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.prompts'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.quick-actions'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.recents'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.scripts'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.settings'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.shelf'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.shortcuts'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.smart-links'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.system-settings'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.system-tasks'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.user-folders'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.volumes'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.window-management'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'tuna.windows'
+
+        [catalogs.globalScopes.scope]
+        kind = 'none'
+
+[[comboMode.bindings]]
+key = "1"
+
+[comboMode.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace workspace 1"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings]]
+key = "2"
+
+[comboMode.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace workspace 2"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings]]
+key = "3"
+
+[comboMode.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace workspace 3"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings]]
+key = "4"
+
+[comboMode.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace workspace 4"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings]]
+key = "5"
+
+[comboMode.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace workspace 5"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings]]
+key = "6"
+
+[comboMode.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace workspace 6"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings]]
+key = "7"
+
+[comboMode.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace workspace 7"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings]]
+key = "8"
+
+[comboMode.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace workspace 8"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings]]
+key = "9"
+
+[comboMode.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace workspace 9"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings]]
+key = "a"
+
+[comboMode.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace workspace A"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings]]
+key = "b"
+
+[comboMode.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace workspace B"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings]]
+key = "c"
+
+[comboMode.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace workspace C"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings]]
+key = "d"
+
+[comboMode.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace workspace D"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings]]
+key = "e"
+
+[comboMode.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace workspace E"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings]]
+key = "f"
+
+[comboMode.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace workspace F"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings]]
+key = "g"
+
+[comboMode.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace workspace G"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings]]
+key = "i"
+
+[comboMode.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace workspace I"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings]]
+key = "n"
+
+[comboMode.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace workspace N"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings]]
+key = "o"
+
+[comboMode.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace workspace O"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings]]
+key = "p"
+
+[comboMode.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace workspace P"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings]]
+key = "q"
+
+[comboMode.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace workspace Q"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings]]
+key = "r"
+
+[comboMode.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace workspace R"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings]]
+key = "s"
+
+[comboMode.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace workspace S"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings]]
+key = "t"
+
+[comboMode.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace workspace T"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings]]
+key = "u"
+
+[comboMode.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace workspace U"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings]]
+key = "v"
+
+[comboMode.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace workspace V"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings]]
+key = "w"
+
+[comboMode.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace workspace W"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings]]
+key = "x"
+
+[comboMode.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace workspace X"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings]]
+key = "y"
+
+[comboMode.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace workspace Y"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings]]
+key = "z"
+
+[comboMode.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace workspace Z"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings]]
+key = "m"
+label = "Move window"
+
+[comboMode.bindings.destination]
+type = "group"
+
+[[comboMode.bindings.destination.bindings]]
+key = "1"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace move-node-to-workspace 1"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings.destination.bindings]]
+key = "2"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace move-node-to-workspace 2"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings.destination.bindings]]
+key = "3"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace move-node-to-workspace 3"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings.destination.bindings]]
+key = "4"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace move-node-to-workspace 4"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings.destination.bindings]]
+key = "5"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace move-node-to-workspace 5"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings.destination.bindings]]
+key = "6"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace move-node-to-workspace 6"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings.destination.bindings]]
+key = "7"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace move-node-to-workspace 7"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings.destination.bindings]]
+key = "8"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace move-node-to-workspace 8"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings.destination.bindings]]
+key = "9"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace move-node-to-workspace 9"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings.destination.bindings]]
+key = "a"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace move-node-to-workspace A"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings.destination.bindings]]
+key = "b"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace move-node-to-workspace B"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings.destination.bindings]]
+key = "c"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace move-node-to-workspace C"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings.destination.bindings]]
+key = "d"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace move-node-to-workspace D"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings.destination.bindings]]
+key = "e"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace move-node-to-workspace E"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings.destination.bindings]]
+key = "f"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace move-node-to-workspace F"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings.destination.bindings]]
+key = "g"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace move-node-to-workspace G"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings.destination.bindings]]
+key = "i"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace move-node-to-workspace I"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings.destination.bindings]]
+key = "n"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace move-node-to-workspace N"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings.destination.bindings]]
+key = "o"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace move-node-to-workspace O"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings.destination.bindings]]
+key = "p"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace move-node-to-workspace P"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings.destination.bindings]]
+key = "q"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace move-node-to-workspace Q"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings.destination.bindings]]
+key = "r"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace move-node-to-workspace R"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings.destination.bindings]]
+key = "s"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace move-node-to-workspace S"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings.destination.bindings]]
+key = "t"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace move-node-to-workspace T"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings.destination.bindings]]
+key = "u"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace move-node-to-workspace U"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings.destination.bindings]]
+key = "v"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace move-node-to-workspace V"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings.destination.bindings]]
+key = "w"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace move-node-to-workspace W"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings.destination.bindings]]
+key = "x"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace move-node-to-workspace X"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings.destination.bindings]]
+key = "y"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace move-node-to-workspace Y"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings.destination.bindings]]
+key = "z"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace move-node-to-workspace Z"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings]]
+key = "l"
+label = "Layout"
+
+[comboMode.bindings.destination]
+type = "group"
+
+[[comboMode.bindings.destination.bindings]]
+key = "h"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace layout horizontal"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings.destination.bindings]]
+key = "v"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace layout vertical"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings.destination.bindings]]
+key = "t"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace layout tiles horizontal vertical"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings.destination.bindings]]
+key = "a"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace layout accordion horizontal vertical"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings.destination.bindings]]
+key = "f"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace layout floating tiling"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[[comboMode.bindings.destination.bindings]]
+key = "r"
+
+[comboMode.bindings.destination.bindings.destination]
+type = "command"
+
+[comboMode.bindings.destination.bindings.destination.command]
+type = "savedCommand"
+subjectIdentifiers = ["text:aerospace flatten-workspace-tree"]
+actionIdentifier = "tuna.common-actions/run-text-as-shell-command"
+behavior = "run"
+presentation = "hidden"
+
+[hotkeys]
+custom = []
+
+    [hotkeys.app.comboMode]
+    carbonKeyCode = 105
+    carbonModifiers = 0
+
+[settings]
+backspaceBehavior = 'deleteCharacters'
+comboModeModifierTrigger = 'hyper'
+comboModeThemeStyle = 'none'
+screenPreference = 'primary'
+shelfWindowAlwaysOnTop = false
+showTasksIndicatorWhenHidden = false
+
+[[catalogSettings]]
+catalogIdentifier = 'com.brnbw.tuna.themes.default'
+
+    [catalogSettings.values]
+    ThemeTint = 'graphite'

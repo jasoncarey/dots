@@ -1,0 +1,6 @@
+WRN 2026-07-19T20:12:24.486 ?.69259    server_start:197: Failed to start server: operation not permitted: /private/tmp/nvim.jason/UI7Q3H/nvim.69259.0
+WRN 2026-07-19T20:12:48.726 ?.69898    server_start:197: Failed to start server: operation not permitted: /private/tmp/nvim.jason/VGP0F9/nvim.69898.0
+WRN 2026-07-19T20:16:42.841 ?.75304    server_start:197: Failed to start server: operation not permitted: /private/tmp/nvim.jason/yG3MDy/nvim.75304.0
+WRN 2026-07-19T20:16:54.397 ?.75607    server_start:197: Failed to start server: operation not permitted: /private/tmp/nvim.jason/v0aN5X/nvim.75607.0
+WRN 2026-07-19T20:17:03.791 ?.75914    server_start:197: Failed to start server: operation not permitted: /private/tmp/nvim.jason/SeVi5R/nvim.75914.0
+WRN 2026-07-19T20:17:09.116 ?.76056    server_start:197: Failed to start server: operation not permitted: /private/tmp/nvim.jason/w0Bkbn/nvim.76056.0
