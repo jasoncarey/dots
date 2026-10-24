@@ -62,8 +62,7 @@ for sid in 1 2 3 4 5; do
                background.height=22 \
                padding_left=6 \
                padding_right=6 \
-               background.drawing=off \
-               click_script="yabai -m space --focus $sid"
+               background.drawing=off
 done
 
 # Add a small separator after spaces
@@ -82,21 +81,6 @@ sketchybar --add item front_app center \
     background.drawing=off \
   --subscribe front_app front_app_switched
 
-# ---------- APPS IN CURRENT SPACE (CENTER-RIGHT) ----------
-# sketchybar --add item space_apps center \
-#   --set space_apps \
-#     script="$PLUGIN_DIR/space_apps.sh" \
-#     icon.drawing=off \
-#     background.drawing=off \
-#     updates=on \
-#   --subscribe space_apps front_app_switched
-
-# ---------- APPS IN CURRENT SPACE (CENTER) ----------
-sketchybar --add item space_apps right \
-  --set space_apps \
-    script="$PLUGIN_DIR/space_apps_dynamic.sh" \
-  --subscribe space_apps front_app_switched
-
 # ---------- CLOCK (RIGHT) ----------
 sketchybar --add item clock right \
   --set clock \
@@ -106,10 +90,3 @@ sketchybar --add item clock right \
     label.color=$P_FG \
     background.color=$P_BG_STRONG \
     background.corner_radius=6
-
-# ---------- YABAI FOCUSED WINDOW BORDER COLOR HINT ----------
-# Optional: lightly indicate active window color to match bar accent
-yabai -m config active_window_border_color $P_BLUE
-yabai -m config normal_window_border_color 0xff444267
-yabai -m config window_border on
-yabai -m config window_border_width 3
