@@ -10,7 +10,8 @@ function wt --description 'Worktree fleet: spawn/switch/remove worktree tmux ses
     if test -z "$common"
         set common (realpath (git rev-parse --git-common-dir))
     end
-    set -l repo (basename (dirname $common))
+    set -l mainroot (dirname $common)
+    set -l repo (basename $mainroot)
     set -l base "$HOME/dev/wt/$repo"
 
     set -l cmd $argv[1]
@@ -35,33 +36,52 @@ function wt --description 'Worktree fleet: spawn/switch/remove worktree tmux ses
                 echo "wt rm: usage: wt rm <branch>" >&2
                 return 1
             end
-            set -l session "$repo/$branch"
-            set -l wtpath "$base/$branch"
+            set -l wtpath "$base/"(string replace -a / - -- $branch)
+            if not test -d $wtpath
+                echo "wt: no worktree at $wtpath" >&2
+                return 1
+            end
+            set -l session (__fleet_name $wtpath)
             tmux kill-session -t "=$session" 2>/dev/null
             if not git worktree remove $wtpath 2>/dev/null
                 echo "wt: could not remove $wtpath (uncommitted changes?)." >&2
                 echo "    force with: git worktree remove --force $wtpath" >&2
                 return 1
             end
-            echo "wt: removed $session"
+            echo "wt: removed $session (branch $branch kept)"
             return 0
 
         case '*'
             set -l branch $argv[1]
-            set -l session "$repo/$branch"
-            set -l wtpath "$base/$branch"
+            # Flatten slashes so the dir label is unique: feat/x -> feat-x. The
+            # session name comes from the label (__fleet_name), matching prefix+f.
+            set -l wtpath "$base/"(string replace -a / - -- $branch)
+            set -l setup_cmd ""
 
-            # Create the worktree if it does not exist yet. Existing branch -> check
-            # it out; new branch -> create it from the current HEAD.
             if not test -d $wtpath
+                # Default branch from origin/HEAD (e.g. origin/main); fall back to main.
+                set -l default (git symbolic-ref --short refs/remotes/origin/HEAD 2>/dev/null)
+                or set default origin/main
+                git fetch origin --quiet
+
+                mkdir -p $base
                 if git show-ref --verify --quiet "refs/heads/$branch"
+                    # Existing local branch -> check it out.
                     git worktree add $wtpath $branch; or return 1
+                else if git show-ref --verify --quiet "refs/remotes/origin/$branch"
+                    # Branch exists on origin (e.g. reviewing a PR) -> track it.
+                    git worktree add --track -b $branch $wtpath origin/$branch; or return 1
                 else
-                    git worktree add -b $branch $wtpath; or return 1
+                    # New branch off fresh origin/<default>, not whatever HEAD is.
+                    git worktree add --no-track -b $branch $wtpath $default; or return 1
                 end
+
+                # Links .env now; returns the deps install command, which runs in
+                # the new session's shell window instead of blocking here.
+                set setup_cmd (__wt_setup $mainroot $wtpath)
             end
 
             # Open (or attach to) the worktree's fleet session.
-            __fleet_session $session $wtpath
+            __fleet_session (__fleet_name $wtpath) $wtpath "$setup_cmd"
     end
 end
