@@ -4,6 +4,17 @@ if status is-interactive
     abbr -a lg lazygit
 end
 
+# Corporate CA bundle (Cloudflare Gateway TLS inspection). The managed setup only
+# exports these in /etc/zshenv, which fish never reads — without them node/yarn
+# (e.g. grpc-tools' binary download), curl, aws and python fail with
+# "self-signed certificate in certificate chain".
+set -l ca_bundle "/Library/Application Support/Kingside/certs/combined-ca-bundle.pem"
+if test -f $ca_bundle
+    for var in NODE_EXTRA_CA_CERTS CURL_CA_BUNDLE AWS_CA_BUNDLE SSL_CERT_FILE REQUESTS_CA_BUNDLE
+        set -gx $var $ca_bundle
+    end
+end
+
 # pipx (used by uv as well)
 fish_add_path -g "$HOME/.local/bin"
 
