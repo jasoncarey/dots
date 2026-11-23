@@ -1,0 +1,10 @@
+{
+  "theme": "dark-ansi",
+  "statusLine": {
+    "type": "command",
+    "command": "~/dev/dots/claude/statusline.sh"
+  },
+  "permissions": {
+    "defaultMode": "auto"
+  }
+}

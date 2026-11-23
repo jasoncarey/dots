@@ -26,12 +26,16 @@ and jumps to them).
 |---|---|
 | `work <query>` | zoxide-jump to a project + open/attach its fleet session. No arg = current dir. Session named after the repo (or folder). |
 | `wt` (no arg) | fzf-pick one of the current repo's existing worktrees and open its session. The way to re-enter a worktree made earlier. |
-| `wt <branch>` | Create a NEW worktree (if missing) + its tmux session, then jump to it. |
-| `wt rm <branch>` | Kill the session and remove the worktree. |
+| `wt <branch>` | Create a NEW worktree (if missing) + its tmux session, then jump to it. Local branch → checked out; branch on origin → tracked; otherwise a new branch off freshly-fetched `origin/<default>` (no upstream). New worktrees are prepared by `__wt_setup` (below). |
+| `wt rm <branch>` | Kill the session and remove the worktree (the branch is kept). |
 | `wt ls` | List this repo's open worktree sessions. |
 | `nb <branch>` | In the current worktree: fetch origin's default branch and `switch -c <branch> --no-track origin/<default>`. Reuse a worktree for a new task without checking out `main` (which another worktree may hold). |
-| `prefix + f` | fzf popup to switch sessions (the fleet). `enter` switches; `ctrl-x` kills the highlighted session (session only — not the worktree). |
+| `prefix + f` | Fleet picker popup: open sessions (`●`) on top, then every worktree that has no session yet (`○`), each with its branch + a git status/log preview. `enter` switches to a session, or creates the fleet session for a `○` worktree and jumps in. `ctrl-n` prompts for a branch and runs `wt <branch>` in the highlighted row's repo. `ctrl-d` deletes the highlighted worktree (confirms; offers `--force` if dirty; keeps the branch; refuses the main checkout and the session you're in). `ctrl-x` kills the highlighted session (session only — not the worktree); `ctrl-r` renames it. |
 | `prefix + r` | Reload tmux config. |
+
+In practice the whole lifecycle runs from `prefix + f`: `ctrl-n` to start a
+task, `enter` to move between them (a `○` row reopens a worktree after a reboot
+or `ctrl-x`), `ctrl-d` when it's done. `wt` is the same thing from the shell.
 
 To open an **existing** worktree you can also `work <label>` from anywhere
 (zoxide-jump to it), or `wt` inside the repo to pick from the list.
@@ -46,7 +50,14 @@ nvim / claude / shell windows.
   existing worktree works **regardless of where it lives** — the name comes from
   the worktree's directory label, not its branch (labels are often decoupled from
   branches, e.g. dir `wt/feat` on branch `feat/fiat-rollover`).
-- `wt <branch>` *creates* new worktrees at `~/dev/wt/<repo>/<branch>`. Repos with
+- `wt <branch>` *creates* new worktrees at `~/dev/wt/<repo>/<label>`, where the
+  label is the branch with `/` flattened to `-` (`feat/x` → `feat-x`), so the
+  session is `<repo>/feat-x` and matches what `prefix + f` shows.
+- On creation `__wt_setup` symlinks the main checkout's **untracked** `.env*`
+  files into the worktree (one shared local config; tracked ones like
+  `.env.test` are skipped) and installs deps from whichever lockfile exists
+  (pnpm / yarn / bun / npm, `--frozen-lockfile --prefer-offline`).
+- Repos with
   pre-existing worktrees elsewhere (e.g. `shufflecom-api/wt/<label>`) are opened
   via `wt` (picker) or `work <label>`, not re-created.
 
@@ -74,14 +85,6 @@ Plugins are declared in `tmux/tmux.conf`; tpm itself is untracked and lives in
 `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`, then
 `prefix + I`.
 
-### Attention indicator
-
-When a Claude session finishes or asks a question, a Stop/Notification hook
-(`~/.claude/settings.json` → `tmux/wt-flag.sh`) sets the tmux option `@attention`
-on that session. The status bar then shows `● <session>` for every waiting agent,
-so you can see who needs you from anywhere. The flag clears when you switch into
-that session (`client-session-changed` hook in `tmux/tmux.conf`).
-
 ### Files
 
 - `fish/functions/work.fish` — the `work` command (+ `fish/completions/work.fish`).
@@ -90,11 +93,13 @@ that session (`client-session-changed` hook in `tmux/tmux.conf`).
   nvim/claude/shell windows and jumps. Used by both `work` and `wt`.
 - `fish/functions/__fleet_name.fish` — shared helper: derives the worktree-aware
   session name for a directory. Used by both `work` and `wt`.
-- `tmux/wt-switch.sh` — fzf session switcher (`prefix + f`).
-- `tmux/wt-attention.sh` — emits the `●` chips for the status bar.
-- `tmux/wt-flag.sh` — the Claude hook that raises the flag.
-- `tmux/tmux.conf` — bindings, the clear hook, `status-right`.
-- `~/.claude/settings.json` — registers the `Stop` / `Notification` hooks.
+- `fish/functions/__wt_setup.fish` — new-worktree prep for `wt`: link untracked
+  `.env*` from the main checkout, install deps. (Un-ignored in `.gitignore`, like
+  the other tracked functions.)
+- `tmux/wt-switch.sh` — fleet picker (`prefix + f`). Scans worktrees of every repo
+  that has an open session plus the repo of the current pane, so worktrees show
+  up wherever they live on disk. Plain bash 3.2 (macOS `/bin/bash`).
+- `tmux/tmux.conf` — bindings, `status-right`.
 
 ### Requirements
 
@@ -137,7 +142,7 @@ Three places use fzf, all independent:
 
 | Trigger | What |
 |---|---|
-| `prefix + f` (tmux) | `tmux/wt-switch.sh` — fleet session switcher in a popup. |
+| `prefix + f` (tmux) | `tmux/wt-switch.sh` — fleet picker (sessions + worktrees) in a popup. |
 | `wt` with no arg | picks one of the current repo's worktrees. |
 | fish key bindings | `fzf.fish` plugin (below). |
 
@@ -162,3 +167,18 @@ Rebind with `fzf_configure_bindings --history=... --directory=...` in
 Deps: `fd` (directory search) and `bat` (file preview — the preview command calls
 it with no fallback, so it's required, not optional). `macos-option-as-alt = true`
 in `ghostty/config` is what makes the `ctrl-alt-*` keys reach fish.
+
+## Claude Code
+
+Global Claude config lives in `claude/`, symlinked into `~/.claude/`:
+
+| File | Symlink | Purpose |
+|---|---|---|
+| `claude/CLAUDE.md` | `~/.claude/CLAUDE.md` | Global rules, loaded every session — keep it short. |
+| `claude/settings.json` | `~/.claude/settings.json` | Permissions, status line. |
+| `claude/statusline.sh` | — (referenced by path) | Status line: dir, branch/state, node, model, context %. |
+
+New machine: `ln -sf ~/dev/dots/claude/{CLAUDE.md,settings.json} ~/.claude/`.
+Never track `~/.claude/` machine state (`projects/`, `sessions/`, `history.jsonl`, caches).
+`~/.claude/skills/synced/` is managed by claude.ai — add personal skills as
+`claude/skills/<name>` and symlink each one, not the whole dir.
