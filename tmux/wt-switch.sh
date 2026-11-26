@@ -91,9 +91,9 @@ case "$1" in
                     if (pass == 0 && kind[i] != "open") continue
                     if (pass == 1 && kind[i] != "closed") continue
                     if (kind[i] == "open")
-                        printf "%s\t\033[32m●\033[0m %-*s  \033[36m⎇ %s\033[0m\n", key[i], w, name[i], br[i]
+                        printf "%s\t\033[32m●\033[0m %-*s  \033[36m%s\033[0m\n", key[i], w, name[i], br[i]
                     else
-                        printf "%s\t\033[2m○ %-*s  ⎇ %s\033[0m\n", key[i], w, name[i], br[i]
+                        printf "%s\t\033[2m○ %-*s  %s\033[0m\n", key[i], w, name[i], br[i]
                 }
         }'
     exit 0

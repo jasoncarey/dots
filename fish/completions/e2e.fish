@@ -1,0 +1,5 @@
+complete -c e2e -f -n __fish_use_subcommand -a up -d 'Start the e2e containers (idempotent)'
+complete -c e2e -f -n __fish_use_subcommand -a down -d 'Stop + remove them (and their volumes)'
+complete -c e2e -f -n __fish_use_subcommand -a restart -d 'down then up'
+complete -c e2e -f -n __fish_use_subcommand -a ps -d 'Show their status'
+complete -c e2e -f -n __fish_use_subcommand -a logs -d 'Follow logs (optionally one service)'

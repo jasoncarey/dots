@@ -33,8 +33,12 @@ function __nvm_auto_use --on-variable PWD
     if test -f .nvmrc
         set node_version (string trim (cat .nvmrc))
         if test -n "$node_version"
-            nvm install $node_version >/dev/null
-            nvm use $node_version >/dev/null
+            # Switch if installed (no network); only install when missing.
+            nvm use --silent $node_version 2>/dev/null
+            or nvm install --silent $node_version
+            # Globals are per Node version, so a newly installed one has no yarn.
+            # (Not nvm_default_packages: nvm.fish reinstalls those on every switch.)
+            type -q yarn; or npm install --global --silent yarn
         end
     else if test -n "$nvm_default_version"
         nvm use $nvm_default_version >/dev/null 2>&1

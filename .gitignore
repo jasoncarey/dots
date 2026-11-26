@@ -3,6 +3,7 @@ lazy-lock.json
 fish/completions/*
 !fish/completions/work.fish
 !fish/completions/wt.fish
+!fish/completions/e2e.fish
 !fish/completions/theme.fish
 fish/conf.d/
 fish/functions/*
@@ -14,5 +15,6 @@ fish/functions/*
 !fish/functions/theme.fish
 !fish/functions/nb.fish
 !fish/functions/dps.fish
+!fish/functions/e2e.fish
 fish/themes/
 fish/fish_variables

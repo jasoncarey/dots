@@ -10,3 +10,6 @@ Don't save one-off instructions. Before adding, check for an existing line to up
 ## Environment
 - macOS, fish shell. Dotfiles live in `~/dev/dots` (symlinked into place); edit there, not the symlink targets.
 - I run parallel Claude sessions in git worktrees (`~/dev/wt/<repo>/<label>`) — another session may hold `main`.
+
+## Database
+- Never create or run migrations, in any repo. Suggest a migration name and its target database instead (e.g. `AddOfflineFiatDepositTable` for the main db).
